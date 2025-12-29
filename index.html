@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Port-Intel Attack Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+<header>
+    <div>
+        <h1>🛡️ Port-Intel Attack Dashboard</h1>
+        <p>Live SSH Honeypot Monitoring</p>
+    </div>
+
+    <div class="controls">
+        <button onclick="startHoneypot()">Start Honeypot</button>
+        <button onclick="stopHoneypot()">Stop Honeypot</button>
+        <button onclick="simulateAttack()">Simulate Attack</button>
+    </div>
+</header>
+
+<main>
+    <section class="charts">
+        <div class="chart-box">
+            <h3>Attack Frequency</h3>
+            <canvas id="attackChart"></canvas>
+            <div id="impactBox">Impact: -</div>
+        </div>
+
+        <div class="chart-box">
+            <h3>Severity Distribution</h3>
+            <canvas id="severityChart"></canvas>
+        </div>
+    </section>
+
+    <section class="logs">
+        <h3>Live Attack Logs</h3>
+        <div id="logBox">Waiting for attacks...</div>
+    </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
